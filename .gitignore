@@ -1,0 +1,13 @@
+# Libraries
+libs/
+
+# Visual Studio files
+*.sdf
+*.opensdf
+*.VC.opendb
+*.VC.db
+*.suo
+*.user
+_ReSharper.Caches/
+*Debug/
+*Release/

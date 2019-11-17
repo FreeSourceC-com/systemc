@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Gtest">
+      <UniqueIdentifier>{0cfd8cf9-7d0c-4041-86ca-dadf449ab431}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Models">
+      <UniqueIdentifier>{f34402d3-2d00-41cd-a545-e602f0d5e0ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TestSuite">
+      <UniqueIdentifier>{a192a1c9-f770-42e2-8d7b-49759b77969b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FSC_initiator">
+      <UniqueIdentifier>{939e917b-1c02-4399-950c-f1f85e99e2dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Models\DUT">
+      <UniqueIdentifier>{075ba3fd-ad27-491c-a565-645efde34fd3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Models\Peripheral">
+      <UniqueIdentifier>{e9247282-ecc9-444e-a6e9-3adc06ede6f1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\FSC_initiator.cpp">
+      <Filter>FSC_initiator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\UnitTest.cpp">
+      <Filter>TestSuite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gtest\src\gtest-all.cc" />
+    <ClCompile Include="..\..\..\gtest\src\gtest_main.cc" />
+    <ClCompile Include="..\..\sample\DUT\DUT.cpp">
+      <Filter>Models\DUT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sample\Peripheral\Peripheral.cpp">
+      <Filter>Models\Peripheral</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\FSC_initiator.h">
+      <Filter>FSC_initiator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\UnitTest.h">
+      <Filter>TestSuite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sample\DUT\DUT.h">
+      <Filter>Models\DUT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sample\Peripheral\Peripheral.h">
+      <Filter>Models\Peripheral</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
