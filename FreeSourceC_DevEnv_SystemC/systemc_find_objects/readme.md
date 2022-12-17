@@ -1,3 +1,4 @@
+## Example log
 ```[----------] Running 1 test from 1 test case.
 [----------] Global test environment set-up.
 [----------] 1 test from OR_GATE_Check
@@ -10,3 +11,15 @@
 [     30 ps]resetting...
 [     40 ps]de-assert reset
 [     50 ps]resetting...```
+
+## Folder Structure
+    .
+    ├── ...
+    ├── systemc_find_objects  
+    │   ├───msvc
+    │   │   ├───FreeSource_Bench
+    │   │   ├───src
+    │   └───sample               # source code
+    │       ├───DUT
+    │       └───Peripheral
+    └── ...
