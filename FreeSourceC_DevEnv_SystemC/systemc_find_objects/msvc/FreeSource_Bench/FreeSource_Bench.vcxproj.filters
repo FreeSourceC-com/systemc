@@ -27,13 +27,17 @@
     <ClCompile Include="..\src\UnitTest.cpp">
       <Filter>TestSuite</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\gtest\src\gtest-all.cc" />
-    <ClCompile Include="..\..\..\gtest\src\gtest_main.cc" />
     <ClCompile Include="..\..\sample\DUT\DUT.cpp">
       <Filter>Models\DUT</Filter>
     </ClCompile>
     <ClCompile Include="..\..\sample\Peripheral\Peripheral.cpp">
       <Filter>Models\Peripheral</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gtest\src\gtest_main.cc">
+      <Filter>Gtest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gtest\src\gtest-all.cc">
+      <Filter>Gtest</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

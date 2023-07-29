@@ -27,13 +27,43 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-#include <stdio.h>
+#include <cstdio>
+
 #include "gtest/gtest.h"
 #include "FSC_initiator.h"
+#if defined(GTEST_OS_ESP8266) || defined(GTEST_OS_ESP32) || \
+    (defined(GTEST_OS_NRF52) && defined(ARDUINO))
+// Arduino-like platforms: program entry points are setup/loop instead of main.
+
+#ifdef GTEST_OS_ESP8266
+extern "C" {
+#endif
+
+void setup() { testing::InitGoogleTest(); }
+
+void loop() { RUN_ALL_TESTS(); }
+
+#ifdef GTEST_OS_ESP8266
+}
+#endif
+
+#elif defined(GTEST_OS_QURT)
+// QuRT: program entry point is main, but argc/argv are unusable.
+
+GTEST_API_ int main() {
+  int runall_return = -1;
+  printf("Running main() from %s\n", __FILE__);
+  testing::InitGoogleTest();
+  FCS_Init();
+  runall_return = RUN_ALL_TESTS();
+  FCS_DeInit();
+  return runall_return;
+}
+#else
+// Normal platforms: program entry point is main, argc/argv are initialized.
 
 GTEST_API_ int main(int argc, char **argv) {
   int runall_return = -1;
-
   printf("Running main() from %s\n", __FILE__);
   testing::InitGoogleTest(&argc, argv);
   FCS_Init();
@@ -41,3 +71,4 @@ GTEST_API_ int main(int argc, char **argv) {
   FCS_DeInit();
   return runall_return;
 }
+#endif
