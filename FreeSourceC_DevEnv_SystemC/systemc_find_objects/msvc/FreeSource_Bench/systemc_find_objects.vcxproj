@@ -84,7 +84,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>..\..\..\libs\googletest\googletest\;..\..\..\libs\googletest\googletest\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(GTEST_PATH);$(GTEST_INCLUDE_PATH);$(SYSTEMC_SRC_PATH);..\..\sample\Peripheral;..\..\sample\DUT;..\src;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <IncludePath>$(GTEST_PATH);$(GTEST_INCLUDE_PATH);$(SYSTEMC_SRC_PATH);..\..\sample\Peripheral;..\..\sample\DUT;..\src;$(IncludePath)</IncludePath>

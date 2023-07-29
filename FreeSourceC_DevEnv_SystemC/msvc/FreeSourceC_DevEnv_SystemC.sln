@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32407.343
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FreeSource_Bench", "..\systemc_find_objects\msvc\FreeSource_Bench\FreeSource_Bench.vcxproj", "{2A1B40C7-3F5F-4B74-AF14-837CD6EA3A6B}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "systemc_find_objects", "..\systemc_find_objects\msvc\FreeSource_Bench\systemc_find_objects.vcxproj", "{2A1B40C7-3F5F-4B74-AF14-837CD6EA3A6B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
